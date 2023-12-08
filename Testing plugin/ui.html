@@ -1,0 +1,51 @@
+<!-- <h2>Rectangle Creator</h2>
+<p>Count: <input id="count" value="5"></p>
+<button id="create">Create</button>
+<button id="cancel">Cancel</button>
+<script>
+
+document.getElementById('create').onclick = () => {
+  const textbox = document.getElementById('count');
+  const count = parseInt(textbox.value, 10);
+  parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+</script> -->
+<!-- Standard link tag-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/thomas-lowry/figma-plugin-ds/dist/figma-plugin-ds.css">
+
+
+<style>
+  input {
+    display: block;
+  }
+</style>
+
+<h1>Hello, World</h1>
+
+<div>
+  <label>Text input</label>
+  <input class="input__field" id="count" value="1" >
+</div>
+
+<div class="switch">
+  <input class="switch__toggle" type="checkbox" id="uniqueId">
+  <label class="switch__label" for="uniqueIdA">Label</label>
+</div>
+
+<button class='button button--primary' id="submit">Create</button>
+
+<script src="node_modules/figma-plugin-ds/dist/iife/figma-plugin-ds.js"></script> 
+
+<script>
+document.getElementById('submit').onclick = () => {
+  const textbox = document.getElementById('count');
+  const count = parseInt(textbox.value, 10);
+  parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+}
+
+</script>
