@@ -1,0 +1,144 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #eaeaea;
+}
+
+canvas {
+  display: block;
+}
+
+:root {
+    --grad: linear-gradient(#5157D9, #71FFAD);
+}
+
+#shape1Container {
+  /* width: 480px; */
+  position: relative;
+
+}
+
+#shape1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+
+    box-sizing: border-box;
+    transition: 0.5s ease;
+  }
+
+#shape1overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  z-index: 99;
+  border-radius: 0px;
+}
+
+#shape2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left:0;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+}
+
+#shape2overlay {
+position: absolute;
+width: 50%;
+height: 100%;
+top: 0;
+left:50%;
+z-index: 99;
+border-radius: 0px;
+
+}
+
+
+
+
+#thumbnail {
+    position: absolute;
+    top: 15% ; 
+    left: 35%;
+    width: 50vw;
+    height: 28.125vw;
+    background: #282561;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 0px;
+  }
+
+
+button {
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+    border: 1px solid rgb(182, 182, 182);
+    background: rgba(212, 212, 212, 0.2);
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.5s ease;
+}
+    
+#ui {
+  position: absolute;
+  margin: 20px;
+  padding: 20px;
+  width: 20vw;
+  top: 0 ; 
+  left: 0;
+  font-size: 15px;
+  border-radius: 12px;
+  background: #e4e4e4db
+}
+
+#apptitle {
+  background-color: black;
+  margin: -20px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+  .category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .active-category {
+      background: #191919;
+      color: white;
+
+  }
+
+
+#render:hover {
+  background-color: #5157D9;
+  color:white;
+  border: 1px solid #5157D9;
+}
+  
+  
