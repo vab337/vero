@@ -4,36 +4,100 @@
   <meta charset="UTF-8">
   <title>VERO</title>
   <link rel="stylesheet" href="style.css">
-
-
+  <script src="libraries/html2canvas.js"></script>
 </head>
 <body>
   <div id="ui">
-    <div id="apptitle">VERO Thumbnail Render</div>
-    <div class="category-container">
-    <button class="category" id="pr">Brand Communications</button>
-    <button class="category" id="pa">Government Advocacy</button>
-    <button class="category" id="ev">Event Activation</button>
-    <button class="category" id="ai">AI-powered PR</button>
-    <input class="input" id="title-input" placeholder="Title of Article">
-    <input type='file' id="imgInput"/>
+
+    <div class="section">
+      <div class="section-title">Dimension</div>
+      <div id="ratio-selector">
+        <div class="ratio" value="960x540">
+          <div id="landscape" class="frame"></div>
+          <div>Landscape</div>
+        </div>
+
+        <div class="ratio" value="540x540">
+          <div id="square" class="frame"></div>
+          <div>Square</div>
+        </div>
+
+
+        <div class="ratio" value="540x675">
+          <div id="vertical" class="frame"></div>
+          <div>Vertical</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section ">
+      <div class="section-title">Categories</div>
+      <div class="category-container">
+        <button class="category" id="pr">PR and Influence</button>
+        <button class="category" id="di">Digital Communications</button>
+        <button class="category" id="be">Brand Experience</button>
+        <button class="category" id="gov">Government Relations</button>
+        </div>
+    </div>
+
+    <div class="section arrangement">
+      <div class="section-title"> Arrangement</div>
+      <button class="secondary randomize" id="randomize">Randomize</button>
+  
+      <!-- <label for="layout-selector">Layout:</label> -->
+      <select id="layout-selector">
+        <option value="left-right">2 Categories: Left-Right</option>
+        <option value="top-bottom">2 Categories: Top-Bottom</option>
+        <option value="2-top-1-bottom">3 Categories: 2 Top, 1 Bottom</option>
+        <option value="2-bottom-1-top">3 Categories: 2 Bottom, 1 Top</option>
+        <option value="2-left-1-right">3 Categories: 2 Left, 1 Right</option>
+        <option value="2-right-1-left">3 Categories: 2 Right, 1 Left</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <input class="input" id="title-input" placeholder="Title of Article">
+      <div id="color-chips">
+        <div class="color-chip white" data-color="white"></div>
+        <div class="color-chip blue" data-color="#282561"></div>
+      </div>
+    </div>
+
+
+    <div class="section photo">
+      <div class="section-title">Upload photo</div>
+      <div class="imgInputContainer">
+        <input type='file' id="imgInput"/>
+      <button class="secondary remove-photo" id="removePhoto">Remove Photo</button>
+      </div>
+      
+    </div>
 
     <button class="render" id="render">Render</button>
+    <button class="download" id="download">Download</button>
 
+
+    </div>
 
   </div>
 
-  </div>
+  
 
   <div id="thumbnail">
-      <div id="shape1Container"></div>
-      <div id="shape2Container"></div>
-      <div id="title-container">
-        <div id="title">Article</div>
-      </div>
-
+    <div id="shapeContainer">
+      <div class="grid-cell" id="cell1"></div>
+      <div class="grid-cell" id="cell2"></div>
+      <div class="grid-cell" id="cell3"></div>
+      <div class="grid-cell" id="cell4"></div>
+    </div>
+    <div id="title-container">
+      <div id="title">Article</div>
+    </div>
   </div>
 
-  <script src="sketch.js"></script>
+  <img src="assets/logo.png" alt="Logo" class="logo">
+
+  <script src="sketch2.js"></script>
 </body>
 </html>
